@@ -1,9 +1,19 @@
----
-- ec2:
-    key_name: MyEC2KeyPairNew
-    instance_type: t2.micro
-    image: ami-aa5ebdd2
-    wait: yes
-    group: webserver
-    count: 1
-    assign_public_ip: yes
+# demo_setup.yml
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         key_name: my_key
+         group: Basic Access
+         instance_type: t2.micro
+         image: "{{ ami_id }}"
+         wait: true
+         exact_count: 1
+         instance_tags:
+            Name: Demo
+      register: ec2
