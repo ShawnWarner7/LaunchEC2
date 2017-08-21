@@ -1,0 +1,8 @@
+- ec2:
+    key_name: MyEC2KeyPairNew
+    instance_type: t2.micro
+    image: ami-aa5ebdd2
+    wait: yes
+    group: webserver
+    count: 1
+    assign_public_ip: yes
