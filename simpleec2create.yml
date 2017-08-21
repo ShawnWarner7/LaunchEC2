@@ -1,3 +1,4 @@
+---
 - ec2:
     key_name: MyEC2KeyPairNew
     instance_type: t2.micro
