@@ -1,6 +1,7 @@
 # demo_setup.yml
-
-- hosts: localhost
+---
+- name: Launch EC2
+  hosts: localhost
   connection: local
   gather_facts: False
 
