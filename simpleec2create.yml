@@ -10,7 +10,7 @@
     - name: Provision a set of instances
       ec2:
          key_name: my_key
-         group: sg-72723408
+         group_id: sg-72723408
          instance_type: t2.micro
          image: "{{ ami_id }}"
          region: us-east-1
