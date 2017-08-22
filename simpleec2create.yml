@@ -13,6 +13,7 @@
          group: Basic Access
          instance_type: t2.micro
          image: "{{ ami_id }}"
+         region: us-east-1
          wait: true
          exact_count: 1
          instance_tags:
